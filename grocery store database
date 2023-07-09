@@ -1,0 +1,18 @@
+create table store (id integer primary key, item text, price integer, quantity integer); 
+INSERT into store VALUES (1,"chocolate bar", 1.50,25);
+insert into store values (2, "chips", 2.00, 25);
+insert into store values (3, "lip balm", 3.00, 15);
+insert into store values (4, "juice", 4.50, 30);
+insert into store values (5, "milk", 5.00, 30);
+insert into store values (6, "donuts", 3.50, 40);
+insert into store values (7, "coffee creamer", 4.50, 10); 
+insert into store values (8, "1 ib of peaches", 3.00, 15); 
+insert into store values (9, "cabbage", 3.50, 30); 
+insert into store values (10, "smoothie", 4.75, 45); 
+insert into store values (11, "paper towels", 10.00, 50);
+insert into store values (12, "toilet paper", 8.00, 50); 
+insert into store values (13, "1 ib of onions", 3.50, 20); 
+insert into store values (14, "yogurt", 1.50, 45);
+insert into store values (15, "shampoo",7.50, 30); 
+select * from store order by price; 
+select SUM(quantity) from store order by price; 
