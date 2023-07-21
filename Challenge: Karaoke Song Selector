@@ -26,4 +26,4 @@ INSERT INTO songs (title, artist, mood, duration, released)
 select title from songs; 
 
 select title from songs where mood = "epic";
-select title from songs where mood = "epic" and released > 1990 and duration < 260 seconds
+select title from songs where mood = "epic" and released > 1990 and duration < 240; 
