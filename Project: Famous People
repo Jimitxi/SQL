@@ -1,0 +1,30 @@
+/* Create table about the people and what they do here */
+CREATE TABLE Famous_People (id INTEGER PRIMARY KEY,
+first_name TEXT,
+last_name TEXT,
+birthdate TEXT,
+occupation integer);
+
+CREATE TABLE Singers (id INTEGER PRIMARY KEY, fullname TEXT, AGE integer, birthdate TEXT);
+
+INSERT INTO SINGERS (fullname, age, birthdate) VALUES ("Ariana Grande", "30", "06-26-1993");
+INSERT INTO SINGERS (fullname, age, birthdate) VALUES ("Lady Gaga", "37", "03-28-1986");
+INSERT into Singers (fullname, age, birthdate) VALUES ("Katy Perry", "38", "10-25-1984");
+INSERT into Singers (fullname, age, birthdate) VALUES ("Beyonce", "41", "09-04-1981");
+INSERT into Singers (fullname, age, birthdate) VALUES ("Rhianna", "35", "02-20-1988");
+
+CREATE table MusicVideos (id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Singers_id INTEGER,
+    Video TEXT,
+    year TEXT);
+    
+INSERT INTO MusicVideos (Singers_id, Video, year) VALUES (1, "Focus", "2016");
+INSERT INTO MusicVideos (Singers_id, Video, year) VALUES (2, "Love Game", "2008");
+INSERT INTO MusicVideos (Singers_id, Video, year) VALUES (3, "Hot N Cold", "2008");
+INSERT INTO MusicVideos (Singers_id, Video, year) VALUES (4, "America has a problem", "2022");
+INSERT into MusicVideos (Singers_id, Video, year) VALUES (5, "Umbrella", "2007");
+
+SELECT Singers.fullname, MusicVideos.Video
+FROM Singers 
+JOIN MusicVideos 
+ON Singers.ID = MusicVideos.id
