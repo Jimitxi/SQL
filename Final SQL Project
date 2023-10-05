@@ -1,0 +1,30 @@
+SELECT Firstname, Lastname, CustomerId, Country
+FROM chinook.customers
+WHERE Country !="USA";
+
+SELECT * FROM chinook.SELECT Firstname, Lastname, CustomerId, Country
+FROM chinook.customers
+WHERE Country !="USA";
+
+SELECT * FROM chinook.customers
+WHERE Country = "United Kingdom";
+
+SELECT cust.FirstName, cust.LastName, inv.InvoiceId, inv.BillingCountry, inv.InvoiceDate
+FROM chinook.invoices as inv 
+LEFT JOIN chinook.customers as cust 
+on inv.CustomerId = cust.CustomerId 
+WHERE inv.BillingCountry = "United Kingdom";
+
+SELECT DISTINCT BillingCountry FROM Chinook.invoices;
+
+SELECT emp. lastname, emp. Firstname, inv.InvoiceId 
+FROM chinook.employees emp
+JOIN chinook.Customers cust ON cust.SupportRepId = emp.EmployeeId
+JOIN chinook.Invoices Inv ON Inv.CustomerId = cust.CustomerId;
+
+SELECT * FROM chinook.Employees 
+WHERE title = "IT Staff";
+
+SELECT COUNT(*) 
+FROM chinook.Invoices 
+WHERE InvoiceDate BETWEEN '2010-05-13' and '2011-06-11';
