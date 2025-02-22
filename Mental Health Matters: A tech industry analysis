@@ -1,0 +1,27 @@
+SELECT SurveyID,
+count(distinct QuestionID)
+FROM Answer
+GROUP BY SurveyID;
+
+SELECT
+        SurveyID,
+        COUNT() AS No_of_Employee
+    FROM Answer
+    GROUP BY SurveyID;
+SELECT SurveyID,
+       CASE
+            WHEN AnswerText BETWEEN 18 AND 24 THEN '18-24'
+            WHEN AnswerText BETWEEN 25 AND 34 THEN '25-34'
+            WHEN AnswerText BETWEEN 35 AND 44 THEN '35-44'
+            WHEN AnswerText BETWEEN 45 AND 54 THEN '45-54'
+            WHEN AnswerText BETWEEN 55 AND 64 THEN '55-64'
+            WHEN AnswerText BETWEEN 65 AND 99 THEN 'Over 65 '
+        END AS age_group,
+    COUNT(*) AS count
+FROM Answer
+WHERE SurveyID IN (2014, 2016, 2017, 2018, 2019)
+      AND QuestionID=1
+      AND AnswerText > 18
+
+GROUP BY SurveyID, age_group
+ORDER BY SurveyID, age_group;
