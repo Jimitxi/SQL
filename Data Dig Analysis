@@ -112,6 +112,7 @@ INSERT INTO topmovies(Rank,Title,Studio,Worldwide,Domestic,DomesticPct,Overseas,
 INSERT INTO topmovies(Rank,Title,Studio,Worldwide,Domestic,DomesticPct,Overseas,OverseasPct,Year) VALUES (99,'Casino Royale','Sony',599.00,167.40,0.28,431.60,0.72,2006);
 INSERT INTO topmovies(Rank,Title,Studio,Worldwide,Domestic,DomesticPct,Overseas,OverseasPct,Year) VALUES (100,'Tangled','BV',591.80,200.80,0.34,391.00,0.66,2010);
 # Analysis: 
+
 #1 How many movies are worldwide less than 1000? 
 select *
 from topmovies 
