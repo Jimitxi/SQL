@@ -111,24 +111,25 @@ INSERT INTO topmovies(Rank,Title,Studio,Worldwide,Domestic,DomesticPct,Overseas,
 INSERT INTO topmovies(Rank,Title,Studio,Worldwide,Domestic,DomesticPct,Overseas,OverseasPct,Year) VALUES (98,'Madagascar: Escape 2 Africa','P/DW',603.90,180.00,0.30,423.90,0.70,2008);
 INSERT INTO topmovies(Rank,Title,Studio,Worldwide,Domestic,DomesticPct,Overseas,OverseasPct,Year) VALUES (99,'Casino Royale','Sony',599.00,167.40,0.28,431.60,0.72,2006);
 INSERT INTO topmovies(Rank,Title,Studio,Worldwide,Domestic,DomesticPct,Overseas,OverseasPct,Year) VALUES (100,'Tangled','BV',591.80,200.80,0.34,391.00,0.66,2010);
-
+# Analysis: 
+#1 Select topmovies where worldwide is less than 1000 
 select *
 from topmovies 
 where worldwide < 1000; 
-
+#2 Select topmovies where studio where studio is "Sony" or "P/D/W"
 select * 
 from topmovies 
 where studio = "Sony" 
 OR studio = "P/DW";
-
+#3 - Select topmovies where domestic is more than 500 
 select * 
 from topmovies 
 where domestic > 500;
-
+#4 - Select topmovies where year is less than 2000 
 select *
 from topmovies
 where year < 2000;
-
+#5- Determine the amount of studios in the database, Determine the average(Domestic) from topmovies, Determine the maximum domestic from topmovies, Determine the minimum domestic from topmovies
 select studio, count (*)
 from topmovies GROUP BY studio;
 SELECT * FROM topmovies;
